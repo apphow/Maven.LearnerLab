@@ -9,9 +9,9 @@ public class PersonTest {
 
     @Test
     public void constructorTest() {
-       //Given
-       long expected = 24;
-       //When
+        //Given
+        long expected = 24;
+        //When
         Person person = new Person(expected);
         long actual = person.getId();
         //Then
