@@ -1,47 +1,55 @@
 package io.zipcoder.interfaces;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.awt.event.WindowStateListener;
 
 import static org.junit.Assert.*;
 
 public class InstructorTest {
+    Instructor instructor;
+    Student student1;
+    Student student2;
+
+    @Before
+    public void testConstructor() {
+        instructor = new Instructor(25L, "Dolio");
+        student1 = new Student(45L, "April");
+        student2 = new Student(46L, "Brittany");
+    }
 
     @Test
     public void testImplementation() {
-        Instructor instructor = new Instructor(2875L, "Chelsea");
         Assert.assertTrue(instructor instanceof Teacher);
     }
 
     @Test
     public void testInheritance() {
-        Instructor instructor = new Instructor(65L, "Brittany");
         Assert.assertTrue(instructor instanceof Person);
     }
 
     @Test
     public void testTeach() {
-       Instructor instructor1 = new Instructor(234L, "Roberto");
-       Student student1 = new Student(33L, "April");
-       double expectedStudyTime = 25.0;
-       instructor1.teach(student1, expectedStudyTime);
-       double actualStudyTime = student1.getTotalStudyTime();
+        instructor.teach(student1, 50);
+        double expectedStudyTime = 50;
+        double actualStudyTime = student1.getTotalStudyTime();
 
        Assert.assertEquals(expectedStudyTime, actualStudyTime, 0);
+        System.out.println(expectedStudyTime);
+        System.out.println(actualStudyTime);
     }
 
     @Test
     public void testLecture() {
-        Instructor instructor1 = new Instructor(265L, "Dolio");
-        Student student1 = new Student(35L, "April");
-        Student student2 = new Student(678L, "Cameron");
+        Learner[] learners = {student1, student2};
+        instructor.lecture(learners, 50);
+        double expectedTotalStudyTime = 25;
+        double actualTotalStudyTime = student1.getTotalStudyTime();
 
-        Learner[] students = {student1, student2};
-        instructor1.lecture(students, 48);
-
-        double expectedTime = 24;
-        double actualTime = student2.getTotalStudyTime();
-
-        Assert.assertEquals(expectedTime, actualTime, 0);
+        Assert.assertEquals(expectedTotalStudyTime, actualTotalStudyTime, 0);
+        System.out.println(expectedTotalStudyTime);
+        System.out.println(actualTotalStudyTime);
     }
 }
