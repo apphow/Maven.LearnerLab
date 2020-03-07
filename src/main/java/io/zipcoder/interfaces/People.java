@@ -41,7 +41,7 @@ public class People implements Iterable<Person>{
         personList.remove(findById(id));
     }
 
-    public void removeAll() {
-        personList.removeAll(personList);
+    public void removeAll(ArrayList<Person> newArrayList) {
+        personList.removeAll(newArrayList);
     }
 }

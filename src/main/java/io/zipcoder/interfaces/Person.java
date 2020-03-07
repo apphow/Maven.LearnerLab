@@ -1,12 +1,14 @@
 package io.zipcoder.interfaces;
 
 public class Person {
+    Person person3;
     final Long id;
     private String name;
 
+
     public Person(Long id, String name) {
         this.id = id;
-        this.name = name;
+        this.name = "";
     }
 
     public Person(Long id) {
@@ -24,5 +26,6 @@ public class Person {
     public String getName() {
         return this.name;
     }
-}
+    }
+
 
