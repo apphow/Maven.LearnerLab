@@ -51,8 +51,6 @@ public class PeopleTest {
         Person actualById = personList.findById(person3.getId());
 
         Assert.assertEquals(expectedByID, actualById);
-        System.out.println(expectedByID);
-        System.out.println(actualById);
     }
 
     @Test

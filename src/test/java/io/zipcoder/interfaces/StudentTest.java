@@ -7,25 +7,25 @@ import static org.junit.Assert.*;
 
 public class StudentTest {
 
+    Student student = new Student(388L, "April");
+
     @Test
     public void testImplementation() {
-        Student student1 = new Student(145L, "April");
-        Assert.assertTrue(student1 instanceof Learner);
+        Student student = new Student(2356L, "April");
+        Assert.assertTrue(student instanceof Learner);
     }
 
     @Test
     public void testInheritance() {
-        Student student1 = new Student(345L, "April");
-        Assert.assertTrue(student1 instanceof Person);
+        Student student = new Student(3890L, "Cameron");
+        Assert.assertTrue(student instanceof Person);
     }
 
     @Test
     public void testLearn() {
-        Student student1 = new Student(48959L, "April");
-        student1.learn(200);
-        double actual = student1.getTotalStudyTime();
-        double expected = 200;
-
-        Assert.assertEquals(expected, actual, 0);
+        student.learn(100);
+        double expected = 100;
+        double actual = student.getTotalStudyTime();
+        Assert.assertEquals(actual, expected, 0);
     }
 }

@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 public interface Teacher {
 
-     public void teach(Learner learner, double numberOfHours);
-     public void lecture(Learner[] learners, double numberOfHours);
+    public double teach(Learner learner, double numberOfHourse);
 
-    }
+    public void lecture(Learner[] learners, double numberOfHours);
+}

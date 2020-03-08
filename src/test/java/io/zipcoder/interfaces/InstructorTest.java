@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.awt.event.WindowStateListener;
-
 import static org.junit.Assert.*;
 
 public class InstructorTest {
@@ -36,7 +34,7 @@ public class InstructorTest {
         double expectedStudyTime = 50;
         double actualStudyTime = student1.getTotalStudyTime();
 
-       Assert.assertEquals(expectedStudyTime, actualStudyTime, 0);
+        Assert.assertEquals(expectedStudyTime, actualStudyTime, 0);
         System.out.println(expectedStudyTime);
         System.out.println(actualStudyTime);
     }
