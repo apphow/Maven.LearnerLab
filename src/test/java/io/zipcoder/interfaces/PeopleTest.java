@@ -14,7 +14,12 @@ public class PeopleTest {
 
     @Before
     public void setUp() throws Exception {
-        personList = new People();
+        personList = new People() {
+            @Override
+            public Person[] getArray() {
+                return new Person[0];
+            }
+        };
         person1 = new Person(25L, "April");
         person2 = new Person(48L, "Jill");
         person3 = new Person(65L, "Cameron");
