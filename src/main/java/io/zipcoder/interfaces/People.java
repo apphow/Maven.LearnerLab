@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public abstract class People <E extends Person> {
+public abstract class People <E extends Person> implements Iterable<E> {
+    List<E> personList;
 
-   public ArrayList<E> personList = new ArrayList<E>();
+    public People() {
+        personList = new ArrayList<E>();
+    }
 
     public void add(E person) {
         personList.add(person);

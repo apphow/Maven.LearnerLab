@@ -1,5 +1,7 @@
 package io.zipcoder.interfaces;
 
+import java.util.Iterator;
+
 public class ZipCodeWilmington extends People {
 
     private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
@@ -20,6 +22,11 @@ public class ZipCodeWilmington extends People {
     @Override
     public Person[] getArray() {
         return new Person[0];
+    }
+
+    @Override
+    public Iterator iterator() {
+        return null;
     }
 }
 

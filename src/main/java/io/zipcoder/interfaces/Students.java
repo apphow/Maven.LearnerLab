@@ -1,5 +1,7 @@
 package io.zipcoder.interfaces;
 
+import java.util.Iterator;
+
 //final makes class unextendable
 public final class Students extends People <Student>{
 
@@ -13,5 +15,8 @@ public final class Students extends People <Student>{
     }
 
 
-
+    @Override
+    public Iterator<Student> iterator() {
+        return null;
+    }
 }

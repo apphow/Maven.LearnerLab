@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Iterator;
+
 import static org.junit.Assert.*;
 
 public class PeopleTest {
@@ -15,6 +17,11 @@ public class PeopleTest {
     @Before
     public void setUp() throws Exception {
         personList = new People() {
+            @Override
+            public Iterator iterator() {
+                return null;
+            }
+
             @Override
             public Person[] getArray() {
                 return new Person[0];
